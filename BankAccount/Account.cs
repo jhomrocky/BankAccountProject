@@ -8,10 +8,7 @@ namespace BankAccount
 {
     abstract class Account
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        
+        //Account setup
         protected int accountNumber;
         protected string accountType;
         public double savingsAccountBalance;
@@ -27,6 +24,7 @@ namespace BankAccount
             set { this.accountType = value; }
         }
 
+        //Constructor
         public Account()
         {
 
@@ -39,14 +37,9 @@ namespace BankAccount
             this.accountType = accountType;
         }
 
-        public virtual void AddBalance()
-        {
-            
-        }
-        public virtual void DeductBalance()
-        {
-            
-        }
+        //Abstract Methods
+        public abstract void AddBalance();
+        public abstract void DeductBalance();
 
     }
 }

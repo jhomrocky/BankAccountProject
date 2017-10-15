@@ -15,6 +15,7 @@ namespace BankAccount
             this.accountNumber = accountNumber;
         }
 
+
         public override void AddBalance()
         {
             Console.WriteLine("How much would you like to add?");
@@ -23,7 +24,7 @@ namespace BankAccount
         }
         public override void DeductBalance()
         {
-            Console.WriteLine("How much would you like to add?");
+            Console.WriteLine("How much would you like to deduct?");
             checkingAccountBalance = (checkingAccountBalance - double.Parse(Console.ReadLine()));
             Console.WriteLine("Your new balance is: " + checkingAccountBalance);
         }

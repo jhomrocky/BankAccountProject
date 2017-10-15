@@ -27,6 +27,7 @@ namespace BankAccount
         {
             Console.WriteLine("Name: " + clientName);
             Console.WriteLine("Account Level: " + accountLevel);
+            Console.WriteLine("Phone Number: " + phoneNumber);
         }
     }
 }
