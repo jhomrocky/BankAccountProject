@@ -8,6 +8,9 @@ namespace BankAccount
 {
     abstract class Account
     {
+/// <summary>
+/// 
+/// </summary>
         public int accountNumber;
         protected double accountBalance;
         protected string accountType;
