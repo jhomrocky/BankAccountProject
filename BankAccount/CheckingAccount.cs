@@ -9,22 +9,23 @@ namespace BankAccount
     class CheckingAccount : Account
     {
         
-        public CheckingAccount(double accountBalance)
+        public CheckingAccount(double checkingAccountBalance, int accountNumber)
         {
-            this.accountBalance = accountBalance;
+            this.checkingAccountBalance = checkingAccountBalance;
+            this.accountNumber = accountNumber;
         }
 
         public override void AddBalance()
         {
             Console.WriteLine("How much would you like to add?");
-            double.Parse(Console.ReadLine());
-            newBalance = accountBalance += double.Parse(Console.ReadLine());
+            checkingAccountBalance = (checkingAccountBalance + double.Parse(Console.ReadLine()));
+            Console.WriteLine("Your new balance is: " + checkingAccountBalance);
         }
         public override void DeductBalance()
         {
             Console.WriteLine("How much would you like to add?");
-            double.Parse(Console.ReadLine());
-            newBalance = accountBalance -= double.Parse(Console.ReadLine());
+            checkingAccountBalance = (checkingAccountBalance - double.Parse(Console.ReadLine()));
+            Console.WriteLine("Your new balance is: " + checkingAccountBalance);
         }
 
 

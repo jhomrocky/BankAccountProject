@@ -9,21 +9,23 @@ namespace BankAccount
     class Client
     {
         private string clientName;
-        private int accountNumber;
         private string accountLevel;
+        private string phoneNumber;
         
+        public Client()
+        {
 
-        public Client(string clientName, int accountNumber, string accountLevel)
+        }
+        public Client(string clientName, string accountLevel, string phoneNumber)
         {
             this.clientName = clientName;
-            this.accountNumber = accountNumber;
             this.accountLevel = accountLevel;
+            this.phoneNumber = phoneNumber;
         }
 
         public virtual void DisplayInformation()
         {
             Console.WriteLine("Name: " + clientName);
-            Console.WriteLine("Account Number: " + accountNumber);
             Console.WriteLine("Account Level: " + accountLevel);
         }
     }

@@ -11,28 +11,34 @@ namespace BankAccount
 
         private double minimumBalance;
 
-        public SavingsAccount(double accountBalance)
+        public SavingsAccount(double savingsAccountBalance, int accountNumber)
         {
-            this.accountBalance = accountBalance;
+            this.savingsAccountBalance = savingsAccountBalance;
+            this.accountNumber = accountNumber;
             this.minimumBalance = 0.0d;
         }
 
         public override void AddBalance()
         {
             Console.WriteLine("How much would you like to add?");
-            double.Parse(Console.ReadLine());
-            newBalance = accountBalance += double.Parse(Console.ReadLine());
+            savingsAccountBalance = (savingsAccountBalance + double.Parse(Console.ReadLine()));
+            Console.WriteLine("Your new balance is: " + savingsAccountBalance);
         }
         public override void DeductBalance()
         {
             Console.WriteLine("How much would you like to deduct?");
-            double.Parse(Console.ReadLine());
-            newBalance = accountBalance -= double.Parse(Console.ReadLine());
-                while (minimumBalance < 0)
+            savingsAccountBalance = (savingsAccountBalance - double.Parse(Console.ReadLine()));
+                if (savingsAccountBalance < minimumBalance)
                 {
                 Console.WriteLine("You cannot go below $0 in your savings. Please enter a new amount.");
                 double.Parse(Console.ReadLine());
                 }
+                else
+                {
+                Console.WriteLine("Your new balance is: " + savingsAccountBalance);
+                }
+
+            Console.WriteLine("Your new balance is: " + savingsAccountBalance);
         }
     }
 }

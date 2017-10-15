@@ -8,22 +8,18 @@ namespace BankAccount
 {
     abstract class Account
     {
-/// <summary>
-/// 
-/// </summary>
-        public int accountNumber;
-        protected double accountBalance;
+        /// <summary>
+        /// 
+        /// </summary>
+        
+        protected int accountNumber;
         protected string accountType;
-        protected double newBalance;
+        public double savingsAccountBalance;
+        public double checkingAccountBalance;
 
         public int AccountNumber
         {
             get { return this.accountNumber; }
-        }
-        public double AccountBalance
-        {
-            get { return this.accountBalance; }
-            set { this.accountBalance = value; }
         }
         public string AccountType
         {
@@ -35,20 +31,21 @@ namespace BankAccount
         {
 
         }
-        public Account (int accountNumber, double accountBalance, string accountType)
+        public Account (int accountNumber, double savingsAccountBalance, double checkingAccountBalance, string accountType)
         {
             this.accountNumber = accountNumber;
-            this.accountBalance = accountBalance;
+            this.savingsAccountBalance = savingsAccountBalance;
+            this.checkingAccountBalance = checkingAccountBalance;
             this.accountType = accountType;
         }
 
         public virtual void AddBalance()
         {
-            accountBalance = newBalance;
+            
         }
         public virtual void DeductBalance()
         {
-            accountBalance = newBalance;
+            
         }
 
     }
